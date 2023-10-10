@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package monolith.a.v1;
+
+message SayRequest { string sentence = 1; }
+
+message SayResponse { string sentence = 1; }
+
+service AService {
+  rpc Say(SayRequest) returns (SayResponse) {}
+}
